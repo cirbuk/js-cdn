@@ -147,7 +147,7 @@ eval("/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, 
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-!function(e,t){ true?t(exports):undefined}(this,(function(e){"use strict";var t;e.CartObjectStatus=void 0,(t=e.CartObjectStatus||(e.CartObjectStatus={})).DRAFT="DRAFT",t.PUBLISHED="PUBLISHED",t.ARCHIVED="ARCHIVED",e.CartFeature=void 0,(e.CartFeature||(e.CartFeature={})).RECOMMENDED="recommended";var T,E;e.TieredDiscountType=void 0,(T=e.TieredDiscountType||(e.TieredDiscountType={})).FIXED="fixed_amount",T.PERCENTAGE="percentage",T.BXGY_PRODUCTS="bxgy::products",e.TieredConditionType=void 0,(E=e.TieredConditionType||(e.TieredConditionType={})).MIN_CART_VALUE="MIN_CART_VALUE",E.MIN_QUANTITY="MIN_QUANTITY";var o,C;e.ChannelMethod=void 0,(o=e.ChannelMethod||(e.ChannelMethod={})).HELLO="HELLO",o.CART="CART",o.OPEN_CART="OPEN_CART",o.CLOSE_CART="CLOSE_CART",o.UPDATE_CART="UPDATE_CART",o.CHECKOUT="CHECKOUT",o.SETUP_LAUNCHER="setupLauncher",o.GET_QUERY="getQuery",e.CartEventAction=void 0,(C=e.CartEventAction||(e.CartEventAction={})).OPEN_CART="openCart",C.CHANGE_TRIGGER="changeTrigger",C.UPDATE_TRIGGER="updateTrigger",C.CLEAR_TRIGGER="clearTrigger",C.ADD_TRIGGER="addTrigger",C.ADD_ITEM="addItem",C.CLEAR_CART="clearCart",C.REMOVE_ITEM="removeItem",C.UPDATE_ITEM="updateItem",C.UPDATE_DISCOUNT="updateDiscount",C.LAUNCHER_CLICK="launcherClick";var r,d,i;e.Addon=void 0,(r=e.Addon||(e.Addon={})).RECOMMENDED="recommended",r.SCROLL_BANNER="scrollBanner",r.LAUNCHER="launcher",e.CheckoutType=void 0,(d=e.CheckoutType||(e.CheckoutType={})).SWIFT="swift",d.FASTRR="fastrr",d.GOKWIK="gokwik",d.SHOPIFY="shopify",d.SHOPFLO="shopflo",e.CheckoutStatus=void 0,(i=e.CheckoutStatus||(e.CheckoutStatus={})).ENABLED="enabled",i.DISABLED="disabled";e.ACK_HELLO_MESSAGE="Major Tom",e.ATTRIBUTION_PROP="__mmWidget",e.HELLO_MESSAGE="Ground control",e.ITEM_TIER_PROP="_mmTier",e.SIDECART_V2_APP="sidecart",e.SIDECART_V2_VERSION="2.0"}));
+!function(e,t){ true?t(exports):undefined}(this,(function(e){"use strict";var t,T;e.CartObjectStatus=void 0,(t=e.CartObjectStatus||(e.CartObjectStatus={})).DRAFT="DRAFT",t.PUBLISHED="PUBLISHED",t.ARCHIVED="ARCHIVED",e.CartFeature=void 0,(T=e.CartFeature||(e.CartFeature={})).RECOMMENDED="recommended",T.BXGY_BANNER="bxgyBanner";var E,o;e.TieredDiscountType=void 0,(E=e.TieredDiscountType||(e.TieredDiscountType={})).FIXED="fixed_amount",E.PERCENTAGE="percentage",E.BXGY_PRODUCTS="bxgy::products",e.TieredConditionType=void 0,(o=e.TieredConditionType||(e.TieredConditionType={})).MIN_CART_VALUE="MIN_CART_VALUE",o.MIN_QUANTITY="MIN_QUANTITY";var C,r;e.ChannelMethod=void 0,(C=e.ChannelMethod||(e.ChannelMethod={})).HELLO="HELLO",C.CART="CART",C.OPEN_CART="OPEN_CART",C.CLOSE_CART="CLOSE_CART",C.UPDATE_CART="UPDATE_CART",C.CHECKOUT="CHECKOUT",C.GET_QUERY="GET_QUERY",e.CartEventAction=void 0,(r=e.CartEventAction||(e.CartEventAction={})).OPEN_CART="openCart",r.CHANGE_TRIGGER="changeTrigger",r.UPDATE_TRIGGER="updateTrigger",r.CLEAR_TRIGGER="clearTrigger",r.ADD_TRIGGER="addTrigger",r.ADD_ITEM="addItem",r.CLEAR_CART="clearCart",r.REMOVE_ITEM="removeItem",r.UPDATE_ITEM="updateItem",r.UPDATE_DISCOUNT="updateDiscount",r.LAUNCHER_CLICK="launcherClick";var d,n,i;e.Addon=void 0,(d=e.Addon||(e.Addon={})).RECOMMENDED="recommended",d.SCROLL_BANNER="scrollBanner",d.LAUNCHER="launcher",d.BXGY_BANNER="bxgyBanner",e.CheckoutType=void 0,(n=e.CheckoutType||(e.CheckoutType={})).SWIFT="swift",n.FASTRR="fastrr",n.GOKWIK="gokwik",n.SHOPIFY="shopify",n.SHOPFLO="shopflo",e.CheckoutStatus=void 0,(i=e.CheckoutStatus||(e.CheckoutStatus={})).ENABLED="enabled",i.DISABLED="disabled";e.ACK_HELLO_MESSAGE="Major Tom",e.ATTRIBUTION_PROP="__mmWidget",e.HELLO_MESSAGE="Ground control",e.ITEM_TIER_PROP="_mmTier",e.SIDECART_V2_APP="sidecart",e.SIDECART_V2_VERSION="2.0"}));
 
 
 /***/ }),
@@ -684,42 +684,36 @@ class SideCart_SideCart {
             origin: this.frameUrl,
             scope: dist["SIDECART_V2_APP"],
         });
-        Object(utils_console["b" /* debugLog */])(`Sending HELLO with message "${dist["HELLO_MESSAGE"]}"`);
         this.setupChannelEvents();
         const { currency: { active_currency_code: currencyCode }, store, } = Object(platform["a" /* getPlatformData */])();
-        const helloData = {
+        const storeData = {
             currencyCode,
             deviceId: Object(deviceID["a" /* getDeviceID */])(),
             path: window.location.pathname,
             store,
             shopUrl: window.location.href,
         };
-        this.channel.call({
-            method: dist["ChannelMethod"].HELLO,
-            params: {
-                message: dist["HELLO_MESSAGE"],
-                data: helloData,
-            },
-            timeout: 500,
-            success: ({ message }) => {
-                if (message === dist["ACK_HELLO_MESSAGE"]) {
-                    Object(utils_console["b" /* debugLog */])(`HELLO acked by widget-app with "${dist["ACK_HELLO_MESSAGE"]}"`);
-                    this.setStatus(SideCartStatus.READY);
-                    this.setupInterception();
-                    resolve();
+        Object(utils_console["b" /* debugLog */])(`Listening for HELLO from iframe`);
+        this.channel.bind(dist["ChannelMethod"].HELLO, (_, params) => {
+            const { message, launcher } = params;
+            Object(utils_console["b" /* debugLog */])(`HELLO received with message"${message}"`);
+            if (message === dist["HELLO_MESSAGE"]) {
+                this.setStatus(SideCartStatus.READY);
+                this.setupInterception();
+                Object(utils_console["b" /* debugLog */])(`Sidecart status set as READY`);
+                if (!Object(lodash["i" /* isUndefined */])(launcher)) {
+                    Object(utils_console["b" /* debugLog */])(`Setting up launcher with `, launcher);
+                    this.setupLauncher(launcher);
                 }
-                else {
-                    Object(utils_console["b" /* debugLog */])(`FAILED: Wrong HELLO ack from widget-app`);
-                    this.setStatus(SideCartStatus.HELLO_FAILED);
-                    reject();
-                }
-            },
-            error: (error) => {
-                Object(utils_console["b" /* debugLog */])(error);
-                Object(utils_console["b" /* debugLog */])("HELLO not acked by widget-app in 500 ms");
-                this.setStatus(SideCartStatus.TIME_OUT);
-                reject();
-            },
+                resolve();
+                return {
+                    message: dist["ACK_HELLO_MESSAGE"],
+                    storeData,
+                };
+            }
+            this.setStatus(SideCartStatus.HELLO_FAILED);
+            reject();
+            return undefined;
         });
     }
     setStatus(status) {
@@ -935,13 +929,6 @@ class SideCart_SideCart {
             }));
             channel.bind(dist["ChannelMethod"].CHECKOUT, (_t, payload) => __awaiter(this, void 0, void 0, function* () {
                 Object(checkout["a" /* processCheckout */])(payload);
-            }));
-            channel.bind(dist["ChannelMethod"].SETUP_LAUNCHER, (_t, payload) => __awaiter(this, void 0, void 0, function* () {
-                Object(utils_console["b" /* debugLog */])("SETUP_LAUNCHER received", payload);
-                const { config } = payload;
-                if (!Object(lodash["i" /* isUndefined */])(config)) {
-                    this.setupLauncher(config);
-                }
             }));
             channel.bind(dist["ChannelMethod"].GET_QUERY, () => {
                 Object(utils_console["b" /* debugLog */])("GET_QUERY received");
