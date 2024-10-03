@@ -470,7 +470,7 @@ function convertToShopifyCart(updatedCart) {
     return Object.assign(Object.assign({}, restOfCart), { cart_level_discount_applications: cartLevelDiscounts.map(({ discount_application: discountApplication }) => (Object.assign({}, discountApplication))) });
 }
 const stringifyAddProperties = (add) => add.map((_a) => {
-    var { properties } = _a, rest = __rest(_a, ["properties"]);
+    var { properties = {} } = _a, rest = __rest(_a, ["properties"]);
     return (Object.assign(Object.assign({}, rest), { properties: Object(lodash["k" /* mapValues */])(properties, (value) => JSON.stringify(value)) }));
 });
 
