@@ -620,7 +620,7 @@ class SideCart_SideCart {
         iframe.style.top = "0";
         iframe.style.right = "0";
         iframe.style.width = "100vw";
-        iframe.style.height = "100vh";
+        iframe.style.height = "100%";
         iframe.style.border = "none";
         iframe.style.zIndex = HIDE_CART_ZINDEX;
         return iframe;
