@@ -471,7 +471,12 @@ function convertToShopifyCart(updatedCart) {
 }
 const stringifyAddProperties = (add) => add.map((_a) => {
     var { properties = {} } = _a, rest = __rest(_a, ["properties"]);
-    return (Object.assign(Object.assign({}, rest), { properties: Object(lodash["k" /* mapValues */])(properties, (value) => JSON.stringify(value)) }));
+    return (Object.assign(Object.assign({}, rest), { properties: Object(lodash["k" /* mapValues */])(properties, (value) => {
+            if (!Object(lodash["j" /* isValidString */])(value)) {
+                return JSON.stringify(value);
+            }
+            return value;
+        }) }));
 });
 
 // CONCATENATED MODULE: ./src/features/v2widgets/constants.ts
