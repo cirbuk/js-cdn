@@ -659,6 +659,7 @@ class SideCart_SideCart {
         iframe.style.height = "100%";
         iframe.style.border = "none";
         iframe.style.zIndex = HIDE_CART_ZINDEX;
+        iframe.style.backgroundColor = "rgba(0,0,0,.7)";
         return iframe;
     }
     load() {
