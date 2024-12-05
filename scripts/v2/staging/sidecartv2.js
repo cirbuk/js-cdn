@@ -498,7 +498,9 @@ var SideCartStatus;
     SideCartStatus["HELLO_FAILED"] = "hello_failed";
 })(SideCartStatus || (SideCartStatus = {}));
 const HIDE_CART_ZINDEX = "-2147483647";
+const HIDE_CART_BG = "transparent";
 const SHOW_CART_ZINDEX = "2147483647";
+const SHOW_CART_BG = "rgba(0,0,0,.7)";
 
 // CONCATENATED MODULE: ./src/features/v2widgets/sidecart/Launcher.ts
 
@@ -644,6 +646,20 @@ class SideCart_SideCart {
         this.itemAddHandler = Object(lodash["b" /* debounce */])(this.onItemAddIntercepted.bind(this), 500);
         this.setupInterception();
     }
+    hideFrame(overrideFrame) {
+        const frame = overrideFrame !== null && overrideFrame !== void 0 ? overrideFrame : this.iframe;
+        if (frame) {
+            frame.style.zIndex = HIDE_CART_ZINDEX;
+            frame.style.backgroundColor = HIDE_CART_BG;
+        }
+    }
+    showFrame(overrideFrame) {
+        const frame = overrideFrame !== null && overrideFrame !== void 0 ? overrideFrame : this.iframe;
+        if (frame) {
+            frame.style.zIndex = SHOW_CART_ZINDEX;
+            frame.style.backgroundColor = SHOW_CART_BG;
+        }
+    }
     setupFrame() {
         const shop = getShop();
         const { currency: { active_currency_code: currency }, } = Object(platform["a" /* getPlatformData */])();
@@ -658,8 +674,7 @@ class SideCart_SideCart {
         iframe.style.width = "100vw";
         iframe.style.height = "100%";
         iframe.style.border = "none";
-        iframe.style.zIndex = HIDE_CART_ZINDEX;
-        iframe.style.backgroundColor = "rgba(0,0,0,.7)";
+        this.hideFrame(iframe);
         return iframe;
     }
     load() {
@@ -696,7 +711,7 @@ class SideCart_SideCart {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.isReady()) {
                 this.setStatus(SideCartStatus.OPENING);
-                this.iframe.style.zIndex = SHOW_CART_ZINDEX;
+                this.showFrame();
                 (_a = this.channel) === null || _a === void 0 ? void 0 : _a.call({
                     method: dist["ChannelMethod"].OPEN_CART,
                     success: () => {
@@ -713,7 +728,7 @@ class SideCart_SideCart {
             Object(utils_console["b" /* debugLog */])("Closing cart");
             (_a = this.launcher) === null || _a === void 0 ? void 0 : _a.show(true);
             this.setStatus(SideCartStatus.CLOSED);
-            this.iframe.style.zIndex = HIDE_CART_ZINDEX;
+            this.hideFrame();
         }
     }
     onFrameLoad(resolve, reject) {
