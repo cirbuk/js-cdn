@@ -466,7 +466,7 @@ eval("/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, 
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-!function(e,t){ true?t(exports):undefined}(this,(function(e){"use strict";var t;e.CartObjectStatus=void 0,(t=e.CartObjectStatus||(e.CartObjectStatus={})).DRAFT="DRAFT",t.PUBLISHED="PUBLISHED",t.UPDATE_FAILED="UPDATE_FAILED",t.ARCHIVED="ARCHIVED",e.CartFeature=void 0,(e.CartFeature||(e.CartFeature={})).BXGY_BANNER="bxgyBanner";var T,E,o;e.DiscountType=void 0,(T=e.DiscountType||(e.DiscountType={})).FIXED="fixed_amount",T.PERCENTAGE="percentage",T.BXGY_PRODUCTS="bxgy::products",T.FREE_SHIPPING="free_shipping",e.DiscountConditionType=void 0,(E=e.DiscountConditionType||(e.DiscountConditionType={})).MIN_CART_VALUE="MIN_CART_VALUE",E.MIN_QUANTITY="MIN_QUANTITY",E.TIMED="TIMED",E.EACH_TARGET="EACH_TARGET",e.DiscountName=void 0,(o=e.DiscountName||(e.DiscountName={})).TIERED="tiered",o.CODES="codes",o.BXGY="bxgy",o.UPSELL="upsell",o.ORDER="order";var n,C;e.UpsellDisplay=void 0,(n=e.UpsellDisplay||(e.UpsellDisplay={})).VERTICAL="vertical",n.HORIZONTAL="horizontal",e.UpsellRecommendationType=void 0,(C=e.UpsellRecommendationType||(e.UpsellRecommendationType={})).CUSTOM="custom",C.ALGORITHM="algorithm";var a,i,_;e.ChannelMethod=void 0,(a=e.ChannelMethod||(e.ChannelMethod={})).HELLO="HELLO",a.CART="CART",a.OPEN_CART="OPEN_CART",a.CLOSE_CART="CLOSE_CART",a.UPDATE_CART="UPDATE_CART",a.CHECKOUT="CHECKOUT",a.GET_QUERY="GET_QUERY",a.GET_PRODUCTS="GET_PRODUCTS",a.CART_STATS="CART_STATS",e.CartEventAction=void 0,(i=e.CartEventAction||(e.CartEventAction={})).OPEN_CART="openCart",i.CHANGE_TRIGGER="changeTrigger",i.UPDATE_TRIGGER="updateTrigger",i.CLEAR_TRIGGER="clearTrigger",i.ADD_TRIGGER="addTrigger",i.ADD_ITEM="addItem",i.CLEAR_CART="clearCart",i.REMOVE_ITEM="removeItem",i.UPDATE_ITEM="updateItem",i.UPDATE_DISCOUNT="updateDiscount",i.UPDATE_CART_PROPERTIES="updateCartProperties",i.UPDATE_ITEM_PROPERTIES="updateItemProperties",i.LAUNCHER_CLICK="launcherClick",e.UpdateIntent=void 0,(_=e.UpdateIntent||(e.UpdateIntent={})).UPSELL_SELECTED="upsell_selected",_.RECOMMENDATION_SELECTED="recommendation_selected",_.BXGY_SELECTED="bxgy_selected";var A,R,r,d;e.Addon=void 0,(A=e.Addon||(e.Addon={})).SCROLL_BANNER="scrollBanner",A.LAUNCHER="launcher",A.BXGY_BANNER="bxgyBanner",e.BannerType=void 0,(R=e.BannerType||(e.BannerType={})).STATIC="STATIC",R.SCROLLING="SCROLLING",e.CheckoutType=void 0,(r=e.CheckoutType||(e.CheckoutType={})).SWIFT="swift",r.FASTRR="fastrr",r.GOKWIK="gokwik",r.SHOPIFY="shopify",r.SHOPFLO="shopflo",e.CheckoutStatus=void 0,(d=e.CheckoutStatus||(e.CheckoutStatus={})).ENABLED="enabled",d.DISABLED="disabled";e.ACK_HELLO_MESSAGE="Major Tom",e.ATTRIBUTION_PROP="__mmWidget",e.GLOBAL_FOREX_KEY="global",e.HELLO_MESSAGE="Ground control",e.ITEM_BXGY_PROP="__mmBXGY",e.ITEM_TIER_PROP="__mmTier",e.ITEM_UPSELL_PROP="__mmUpsell",e.SIDECART_V2_APP="sidecart",e.SIDECART_V2_VERSION="2.0",e.deprecatedMMProps=["tier","_mmTier","_mmBXGY"]}));
+!function(e,t){ true?t(exports):undefined}(this,(function(e){"use strict";var t;e.CartObjectStatus=void 0,(t=e.CartObjectStatus||(e.CartObjectStatus={})).DRAFT="DRAFT",t.PUBLISHED="PUBLISHED",t.UPDATE_FAILED="UPDATE_FAILED",t.ARCHIVED="ARCHIVED",e.CartFeature=void 0,(e.CartFeature||(e.CartFeature={})).BXGY_BANNER="bxgyBanner";var T,E,o;e.DiscountType=void 0,(T=e.DiscountType||(e.DiscountType={})).FIXED="fixed_amount",T.PERCENTAGE="percentage",T.BXGY_PRODUCTS="bxgy::products",T.FREE_SHIPPING="free_shipping",e.DiscountConditionType=void 0,(E=e.DiscountConditionType||(e.DiscountConditionType={})).MIN_CART_VALUE="MIN_CART_VALUE",E.MIN_QUANTITY="MIN_QUANTITY",E.TIMED="TIMED",E.EACH_TARGET="EACH_TARGET",e.DiscountName=void 0,(o=e.DiscountName||(e.DiscountName={})).TIERED="tiered",o.CODES="codes",o.BXGY="bxgy",o.UPSELL="upsell",o.ORDER="order";var n,C;e.UpsellDisplay=void 0,(n=e.UpsellDisplay||(e.UpsellDisplay={})).VERTICAL="vertical",n.HORIZONTAL="horizontal",e.UpsellRecommendationType=void 0,(C=e.UpsellRecommendationType||(e.UpsellRecommendationType={})).CUSTOM="custom",C.ALGORITHM="algorithm";var _,a,i;e.ChannelMethod=void 0,(_=e.ChannelMethod||(e.ChannelMethod={})).HELLO="HELLO",_.CART="CART",_.OPEN_CART="OPEN_CART",_.CLOSE_CART="CLOSE_CART",_.NO_CART="NO_CART",_.UPDATE_CART="UPDATE_CART",_.CHECKOUT="CHECKOUT",_.GET_QUERY="GET_QUERY",_.GET_PRODUCTS="GET_PRODUCTS",_.CART_STATS="CART_STATS",e.CartEventAction=void 0,(a=e.CartEventAction||(e.CartEventAction={})).OPEN_CART="openCart",a.CHANGE_TRIGGER="changeTrigger",a.UPDATE_TRIGGER="updateTrigger",a.CLEAR_TRIGGER="clearTrigger",a.ADD_TRIGGER="addTrigger",a.ADD_ITEM="addItem",a.CLEAR_CART="clearCart",a.REMOVE_ITEM="removeItem",a.UPDATE_ITEM="updateItem",a.UPDATE_DISCOUNT="updateDiscount",a.UPDATE_CART_PROPERTIES="updateCartProperties",a.UPDATE_ITEM_PROPERTIES="updateItemProperties",a.LAUNCHER_CLICK="launcherClick",e.UpdateIntent=void 0,(i=e.UpdateIntent||(e.UpdateIntent={})).UPSELL_SELECTED="upsell_selected",i.RECOMMENDATION_SELECTED="recommendation_selected",i.BXGY_SELECTED="bxgy_selected";var A,R,r,d;e.Addon=void 0,(A=e.Addon||(e.Addon={})).SCROLL_BANNER="scrollBanner",A.LAUNCHER="launcher",A.BXGY_BANNER="bxgyBanner",e.BannerType=void 0,(R=e.BannerType||(e.BannerType={})).STATIC="STATIC",R.SCROLLING="SCROLLING",e.CheckoutType=void 0,(r=e.CheckoutType||(e.CheckoutType={})).SWIFT="swift",r.FASTRR="fastrr",r.GOKWIK="gokwik",r.SHOPIFY="shopify",r.SHOPFLO="shopflo",e.CheckoutStatus=void 0,(d=e.CheckoutStatus||(e.CheckoutStatus={})).ENABLED="enabled",d.DISABLED="disabled";e.ACK_HELLO_MESSAGE="Major Tom",e.ATTRIBUTION_PROP="__mmWidget",e.GLOBAL_FOREX_KEY="global",e.HELLO_MESSAGE="Ground control",e.ITEM_BXGY_PROP="__mmBXGY",e.ITEM_TIER_PROP="__mmTier",e.ITEM_UPSELL_PROP="__mmUpsell",e.SIDECART_V2_APP="sidecart",e.SIDECART_V2_VERSION="2.0",e.deprecatedMMProps=["tier","_mmTier","_mmBXGY"]}));
 
 
 /***/ }),
@@ -1299,10 +1299,7 @@ class SideCart_SideCart {
         return iframe;
     }
     load() {
-        if (isCartPage()) {
-            window.location.href = `/?action=open-cart-drawer`;
-        }
-        else if (!this.isFrameAdded()) {
+        if (!this.isFrameAdded()) {
             const { iframe } = this;
             document.body.appendChild(iframe);
             this.setStatus(SideCartStatus.ADDED);
@@ -1393,11 +1390,16 @@ class SideCart_SideCart {
             const { message, launcher } = params;
             Object(utils_console["b" /* debugLog */])(`HELLO received with message"${message}"`);
             if (message === dist["HELLO_MESSAGE"]) {
-                this.setStatus(SideCartStatus.READY);
-                Object(utils_console["b" /* debugLog */])(`Sidecart status set as READY`);
-                if (!Object(lodash["k" /* isUndefined */])(launcher)) {
-                    Object(utils_console["b" /* debugLog */])(`Setting up launcher with `, launcher);
-                    this.setupLauncher(launcher);
+                if (isCartPage()) {
+                    window.location.href = `/?action=open-cart-drawer`;
+                }
+                else {
+                    this.setStatus(SideCartStatus.READY);
+                    Object(utils_console["b" /* debugLog */])(`Sidecart status set as READY`);
+                    if (!Object(lodash["k" /* isUndefined */])(launcher)) {
+                        Object(utils_console["b" /* debugLog */])(`Setting up launcher with `, launcher);
+                        this.setupLauncher(launcher);
+                    }
                 }
                 resolve();
                 return {
