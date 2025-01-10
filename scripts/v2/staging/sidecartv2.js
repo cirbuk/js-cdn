@@ -452,7 +452,7 @@ const CFEvent_instance = CFEvent_CFEvent.getInstance();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("/* unused harmony export CART_ROOT */\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"b\", function() { return INVALID_DISCOUNT_CODE; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a\", function() { return CHECKOUT_URL; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"c\", function() { return ajaxCartAPIs; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"d\", function() { return themeCartAPIs; });\n/* harmony import */ var utils_platform__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);\n/* harmony import */ var utils_lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);\n\n\nlet { urls: { home: root }, } = Object(utils_platform__WEBPACK_IMPORTED_MODULE_0__[/* getPlatformData */ \"a\"])();\nroot = Object(utils_lodash__WEBPACK_IMPORTED_MODULE_1__[/* isValidString */ \"l\"])(root) ? root : \"/\";\nroot = root.endsWith(\"/\") ? root : `${root}/`;\nconst CART_ROOT = `${root}cart`;\nconst INVALID_DISCOUNT_CODE = \"((INVALID_DISCOUNT_CODE++\";\nconst CHECKOUT_URL = `${root}checkout`;\nconst ajaxCartAPIs = {\n    fetch: `${CART_ROOT}.js`,\n    add: `${CART_ROOT}/add.js`,\n    update: `${CART_ROOT}/update.js`,\n    change: `${CART_ROOT}/change.js`,\n    clear: `${CART_ROOT}/clear.js`,\n    applyDiscountPrefix: `${root}discount/`,\n};\nconst themeCartAPIs = {\n    add: `${CART_ROOT}/add`,\n    update: `${CART_ROOT}/update`,\n    change: `${CART_ROOT}/change`,\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvdXRpbHMvc2hvcGlmeS9hcGlzLnRzPzA3ZTgiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBaUQ7QUFDSjtBQUM3QyxLQUFLLFFBQVEsYUFBYSxHQUFHLEdBQUcsOEVBQWU7QUFDL0MsT0FBTywwRUFBYTtBQUNwQixzQ0FBc0MsS0FBSztBQUNwQyxxQkFBcUIsS0FBSztBQUMxQjtBQUNBLHdCQUF3QixLQUFLO0FBQzdCO0FBQ1AsY0FBYyxVQUFVO0FBQ3hCLFlBQVksVUFBVTtBQUN0QixlQUFlLFVBQVU7QUFDekIsZUFBZSxVQUFVO0FBQ3pCLGNBQWMsVUFBVTtBQUN4Qiw0QkFBNEIsS0FBSztBQUNqQztBQUNPO0FBQ1AsWUFBWSxVQUFVO0FBQ3RCLGVBQWUsVUFBVTtBQUN6QixlQUFlLFVBQVU7QUFDekIiLCJmaWxlIjoiOC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGdldFBsYXRmb3JtRGF0YSB9IGZyb20gXCJ1dGlscy9wbGF0Zm9ybVwiO1xuaW1wb3J0IHsgaXNWYWxpZFN0cmluZyB9IGZyb20gXCJ1dGlscy9sb2Rhc2hcIjtcbmxldCB7IHVybHM6IHsgaG9tZTogcm9vdCB9LCB9ID0gZ2V0UGxhdGZvcm1EYXRhKCk7XG5yb290ID0gaXNWYWxpZFN0cmluZyhyb290KSA/IHJvb3QgOiBcIi9cIjtcbnJvb3QgPSByb290LmVuZHNXaXRoKFwiL1wiKSA/IHJvb3QgOiBgJHtyb290fS9gO1xuZXhwb3J0IGNvbnN0IENBUlRfUk9PVCA9IGAke3Jvb3R9Y2FydGA7XG5leHBvcnQgY29uc3QgSU5WQUxJRF9ESVNDT1VOVF9DT0RFID0gXCIoKElOVkFMSURfRElTQ09VTlRfQ09ERSsrXCI7XG5leHBvcnQgY29uc3QgQ0hFQ0tPVVRfVVJMID0gYCR7cm9vdH1jaGVja291dGA7XG5leHBvcnQgY29uc3QgYWpheENhcnRBUElzID0ge1xuICAgIGZldGNoOiBgJHtDQVJUX1JPT1R9LmpzYCxcbiAgICBhZGQ6IGAke0NBUlRfUk9PVH0vYWRkLmpzYCxcbiAgICB1cGRhdGU6IGAke0NBUlRfUk9PVH0vdXBkYXRlLmpzYCxcbiAgICBjaGFuZ2U6IGAke0NBUlRfUk9PVH0vY2hhbmdlLmpzYCxcbiAgICBjbGVhcjogYCR7Q0FSVF9ST09UfS9jbGVhci5qc2AsXG4gICAgYXBwbHlEaXNjb3VudFByZWZpeDogYCR7cm9vdH1kaXNjb3VudC9gLFxufTtcbmV4cG9ydCBjb25zdCB0aGVtZUNhcnRBUElzID0ge1xuICAgIGFkZDogYCR7Q0FSVF9ST09UfS9hZGRgLFxuICAgIHVwZGF0ZTogYCR7Q0FSVF9ST09UfS91cGRhdGVgLFxuICAgIGNoYW5nZTogYCR7Q0FSVF9ST09UfS9jaGFuZ2VgLFxufTtcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///8\n");
+eval("/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a\", function() { return CART_ROOT; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"c\", function() { return INVALID_DISCOUNT_CODE; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"b\", function() { return CHECKOUT_URL; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"d\", function() { return ajaxCartAPIs; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"e\", function() { return themeCartAPIs; });\n/* harmony import */ var utils_platform__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);\n/* harmony import */ var utils_lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);\n\n\nlet { urls: { home: root }, } = Object(utils_platform__WEBPACK_IMPORTED_MODULE_0__[/* getPlatformData */ \"a\"])();\nroot = Object(utils_lodash__WEBPACK_IMPORTED_MODULE_1__[/* isValidString */ \"l\"])(root) ? root : \"/\";\nroot = root.endsWith(\"/\") ? root : `${root}/`;\nconst CART_ROOT = `${root}cart`;\nconst INVALID_DISCOUNT_CODE = \"((INVALID_DISCOUNT_CODE++\";\nconst CHECKOUT_URL = `${root}checkout`;\nconst ajaxCartAPIs = {\n    fetch: `${CART_ROOT}.js`,\n    add: `${CART_ROOT}/add.js`,\n    update: `${CART_ROOT}/update.js`,\n    change: `${CART_ROOT}/change.js`,\n    clear: `${CART_ROOT}/clear.js`,\n    applyDiscountPrefix: `${root}discount/`,\n};\nconst themeCartAPIs = {\n    add: `${CART_ROOT}/add`,\n    update: `${CART_ROOT}/update`,\n    change: `${CART_ROOT}/change`,\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvdXRpbHMvc2hvcGlmeS9hcGlzLnRzPzA3ZTgiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBaUQ7QUFDSjtBQUM3QyxLQUFLLFFBQVEsYUFBYSxHQUFHLEdBQUcsOEVBQWU7QUFDL0MsT0FBTywwRUFBYTtBQUNwQixzQ0FBc0MsS0FBSztBQUNwQyxxQkFBcUIsS0FBSztBQUMxQjtBQUNBLHdCQUF3QixLQUFLO0FBQzdCO0FBQ1AsY0FBYyxVQUFVO0FBQ3hCLFlBQVksVUFBVTtBQUN0QixlQUFlLFVBQVU7QUFDekIsZUFBZSxVQUFVO0FBQ3pCLGNBQWMsVUFBVTtBQUN4Qiw0QkFBNEIsS0FBSztBQUNqQztBQUNPO0FBQ1AsWUFBWSxVQUFVO0FBQ3RCLGVBQWUsVUFBVTtBQUN6QixlQUFlLFVBQVU7QUFDekIiLCJmaWxlIjoiOC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGdldFBsYXRmb3JtRGF0YSB9IGZyb20gXCJ1dGlscy9wbGF0Zm9ybVwiO1xuaW1wb3J0IHsgaXNWYWxpZFN0cmluZyB9IGZyb20gXCJ1dGlscy9sb2Rhc2hcIjtcbmxldCB7IHVybHM6IHsgaG9tZTogcm9vdCB9LCB9ID0gZ2V0UGxhdGZvcm1EYXRhKCk7XG5yb290ID0gaXNWYWxpZFN0cmluZyhyb290KSA/IHJvb3QgOiBcIi9cIjtcbnJvb3QgPSByb290LmVuZHNXaXRoKFwiL1wiKSA/IHJvb3QgOiBgJHtyb290fS9gO1xuZXhwb3J0IGNvbnN0IENBUlRfUk9PVCA9IGAke3Jvb3R9Y2FydGA7XG5leHBvcnQgY29uc3QgSU5WQUxJRF9ESVNDT1VOVF9DT0RFID0gXCIoKElOVkFMSURfRElTQ09VTlRfQ09ERSsrXCI7XG5leHBvcnQgY29uc3QgQ0hFQ0tPVVRfVVJMID0gYCR7cm9vdH1jaGVja291dGA7XG5leHBvcnQgY29uc3QgYWpheENhcnRBUElzID0ge1xuICAgIGZldGNoOiBgJHtDQVJUX1JPT1R9LmpzYCxcbiAgICBhZGQ6IGAke0NBUlRfUk9PVH0vYWRkLmpzYCxcbiAgICB1cGRhdGU6IGAke0NBUlRfUk9PVH0vdXBkYXRlLmpzYCxcbiAgICBjaGFuZ2U6IGAke0NBUlRfUk9PVH0vY2hhbmdlLmpzYCxcbiAgICBjbGVhcjogYCR7Q0FSVF9ST09UfS9jbGVhci5qc2AsXG4gICAgYXBwbHlEaXNjb3VudFByZWZpeDogYCR7cm9vdH1kaXNjb3VudC9gLFxufTtcbmV4cG9ydCBjb25zdCB0aGVtZUNhcnRBUElzID0ge1xuICAgIGFkZDogYCR7Q0FSVF9ST09UfS9hZGRgLFxuICAgIHVwZGF0ZTogYCR7Q0FSVF9ST09UfS91cGRhdGVgLFxuICAgIGNoYW5nZTogYCR7Q0FSVF9ST09UfS9jaGFuZ2VgLFxufTtcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///8\n");
 
 /***/ }),
 /* 9 */
@@ -718,7 +718,7 @@ eval("/*\n * js_channel is a very lightweight abstraction on top of\n * postMess
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a\", function() { return processCheckout; });\n/* harmony import */ var utils_shopify_apis__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);\n/* harmony import */ var _kubric_sidecart_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);\n/* harmony import */ var _kubric_sidecart_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_kubric_sidecart_types__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var utils_lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);\n\n\n\nconst processCheckout = ({ checkoutType, orderData, invoiceUrl, }) => {\n    var _a, _b;\n    if (Object(utils_lodash__WEBPACK_IMPORTED_MODULE_2__[/* isValidString */ \"l\"])(invoiceUrl)) {\n        window.open(invoiceUrl, \"_self\");\n    }\n    else if (checkoutType === _kubric_sidecart_types__WEBPACK_IMPORTED_MODULE_1__[\"CheckoutType\"].SWIFT ||\n        checkoutType === _kubric_sidecart_types__WEBPACK_IMPORTED_MODULE_1__[\"CheckoutType\"].GOKWIK) {\n        window.postMessage(orderData, window.location.origin);\n    }\n    else if (checkoutType === _kubric_sidecart_types__WEBPACK_IMPORTED_MODULE_1__[\"CheckoutType\"].FASTRR) {\n        (_b = (_a = window.HeadlessCheckout) === null || _a === void 0 ? void 0 : _a.InitiateMasonCheckout) === null || _b === void 0 ? void 0 : _b.call(_a, orderData);\n    }\n    else {\n        window.open(utils_shopify_apis__WEBPACK_IMPORTED_MODULE_0__[/* CHECKOUT_URL */ \"a\"], \"_self\");\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvdXRpbHMvY2hlY2tvdXQudHM/ZTZiZiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQWtEO0FBQ0k7QUFDVDtBQUN0QywwQkFBMEIsdUNBQXVDO0FBQ3hFO0FBQ0EsUUFBUSwwRUFBYTtBQUNyQjtBQUNBO0FBQ0EsOEJBQThCLG1FQUFZO0FBQzFDLHlCQUF5QixtRUFBWTtBQUNyQztBQUNBO0FBQ0EsOEJBQThCLG1FQUFZO0FBQzFDO0FBQ0E7QUFDQTtBQUNBLG9CQUFvQix1RUFBWTtBQUNoQztBQUNBIiwiZmlsZSI6IjI2LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ0hFQ0tPVVRfVVJMIH0gZnJvbSBcInV0aWxzL3Nob3BpZnkvYXBpc1wiO1xuaW1wb3J0IHsgQ2hlY2tvdXRUeXBlIH0gZnJvbSBcIkBrdWJyaWMvc2lkZWNhcnQtdHlwZXNcIjtcbmltcG9ydCB7IGlzVmFsaWRTdHJpbmcgfSBmcm9tIFwidXRpbHMvbG9kYXNoXCI7XG5leHBvcnQgY29uc3QgcHJvY2Vzc0NoZWNrb3V0ID0gKHsgY2hlY2tvdXRUeXBlLCBvcmRlckRhdGEsIGludm9pY2VVcmwsIH0pID0+IHtcbiAgICB2YXIgX2EsIF9iO1xuICAgIGlmIChpc1ZhbGlkU3RyaW5nKGludm9pY2VVcmwpKSB7XG4gICAgICAgIHdpbmRvdy5vcGVuKGludm9pY2VVcmwsIFwiX3NlbGZcIik7XG4gICAgfVxuICAgIGVsc2UgaWYgKGNoZWNrb3V0VHlwZSA9PT0gQ2hlY2tvdXRUeXBlLlNXSUZUIHx8XG4gICAgICAgIGNoZWNrb3V0VHlwZSA9PT0gQ2hlY2tvdXRUeXBlLkdPS1dJSykge1xuICAgICAgICB3aW5kb3cucG9zdE1lc3NhZ2Uob3JkZXJEYXRhLCB3aW5kb3cubG9jYXRpb24ub3JpZ2luKTtcbiAgICB9XG4gICAgZWxzZSBpZiAoY2hlY2tvdXRUeXBlID09PSBDaGVja291dFR5cGUuRkFTVFJSKSB7XG4gICAgICAgIChfYiA9IChfYSA9IHdpbmRvdy5IZWFkbGVzc0NoZWNrb3V0KSA9PT0gbnVsbCB8fCBfYSA9PT0gdm9pZCAwID8gdm9pZCAwIDogX2EuSW5pdGlhdGVNYXNvbkNoZWNrb3V0KSA9PT0gbnVsbCB8fCBfYiA9PT0gdm9pZCAwID8gdm9pZCAwIDogX2IuY2FsbChfYSwgb3JkZXJEYXRhKTtcbiAgICB9XG4gICAgZWxzZSB7XG4gICAgICAgIHdpbmRvdy5vcGVuKENIRUNLT1VUX1VSTCwgXCJfc2VsZlwiKTtcbiAgICB9XG59O1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///26\n");
+eval("/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"a\", function() { return processCheckout; });\n/* harmony import */ var utils_shopify_apis__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);\n/* harmony import */ var _kubric_sidecart_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);\n/* harmony import */ var _kubric_sidecart_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_kubric_sidecart_types__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var utils_lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);\n\n\n\nconst processCheckout = ({ checkoutType, orderData, invoiceUrl, }) => {\n    var _a, _b;\n    if (Object(utils_lodash__WEBPACK_IMPORTED_MODULE_2__[/* isValidString */ \"l\"])(invoiceUrl)) {\n        window.open(invoiceUrl, \"_self\");\n    }\n    else if (checkoutType === _kubric_sidecart_types__WEBPACK_IMPORTED_MODULE_1__[\"CheckoutType\"].SWIFT ||\n        checkoutType === _kubric_sidecart_types__WEBPACK_IMPORTED_MODULE_1__[\"CheckoutType\"].GOKWIK) {\n        window.postMessage(orderData, window.location.origin);\n    }\n    else if (checkoutType === _kubric_sidecart_types__WEBPACK_IMPORTED_MODULE_1__[\"CheckoutType\"].FASTRR) {\n        (_b = (_a = window.HeadlessCheckout) === null || _a === void 0 ? void 0 : _a.InitiateMasonCheckout) === null || _b === void 0 ? void 0 : _b.call(_a, orderData);\n    }\n    else {\n        window.open(utils_shopify_apis__WEBPACK_IMPORTED_MODULE_0__[/* CHECKOUT_URL */ \"b\"], \"_self\");\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvdXRpbHMvY2hlY2tvdXQudHM/ZTZiZiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQWtEO0FBQ0k7QUFDVDtBQUN0QywwQkFBMEIsdUNBQXVDO0FBQ3hFO0FBQ0EsUUFBUSwwRUFBYTtBQUNyQjtBQUNBO0FBQ0EsOEJBQThCLG1FQUFZO0FBQzFDLHlCQUF5QixtRUFBWTtBQUNyQztBQUNBO0FBQ0EsOEJBQThCLG1FQUFZO0FBQzFDO0FBQ0E7QUFDQTtBQUNBLG9CQUFvQix1RUFBWTtBQUNoQztBQUNBIiwiZmlsZSI6IjI2LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ0hFQ0tPVVRfVVJMIH0gZnJvbSBcInV0aWxzL3Nob3BpZnkvYXBpc1wiO1xuaW1wb3J0IHsgQ2hlY2tvdXRUeXBlIH0gZnJvbSBcIkBrdWJyaWMvc2lkZWNhcnQtdHlwZXNcIjtcbmltcG9ydCB7IGlzVmFsaWRTdHJpbmcgfSBmcm9tIFwidXRpbHMvbG9kYXNoXCI7XG5leHBvcnQgY29uc3QgcHJvY2Vzc0NoZWNrb3V0ID0gKHsgY2hlY2tvdXRUeXBlLCBvcmRlckRhdGEsIGludm9pY2VVcmwsIH0pID0+IHtcbiAgICB2YXIgX2EsIF9iO1xuICAgIGlmIChpc1ZhbGlkU3RyaW5nKGludm9pY2VVcmwpKSB7XG4gICAgICAgIHdpbmRvdy5vcGVuKGludm9pY2VVcmwsIFwiX3NlbGZcIik7XG4gICAgfVxuICAgIGVsc2UgaWYgKGNoZWNrb3V0VHlwZSA9PT0gQ2hlY2tvdXRUeXBlLlNXSUZUIHx8XG4gICAgICAgIGNoZWNrb3V0VHlwZSA9PT0gQ2hlY2tvdXRUeXBlLkdPS1dJSykge1xuICAgICAgICB3aW5kb3cucG9zdE1lc3NhZ2Uob3JkZXJEYXRhLCB3aW5kb3cubG9jYXRpb24ub3JpZ2luKTtcbiAgICB9XG4gICAgZWxzZSBpZiAoY2hlY2tvdXRUeXBlID09PSBDaGVja291dFR5cGUuRkFTVFJSKSB7XG4gICAgICAgIChfYiA9IChfYSA9IHdpbmRvdy5IZWFkbGVzc0NoZWNrb3V0KSA9PT0gbnVsbCB8fCBfYSA9PT0gdm9pZCAwID8gdm9pZCAwIDogX2EuSW5pdGlhdGVNYXNvbkNoZWNrb3V0KSA9PT0gbnVsbCB8fCBfYiA9PT0gdm9pZCAwID8gdm9pZCAwIDogX2IuY2FsbChfYSwgb3JkZXJEYXRhKTtcbiAgICB9XG4gICAgZWxzZSB7XG4gICAgICAgIHdpbmRvdy5vcGVuKENIRUNLT1VUX1VSTCwgXCJfc2VsZlwiKTtcbiAgICB9XG59O1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///26\n");
 
 /***/ }),
 /* 27 */,
@@ -795,6 +795,7 @@ var __rest = (undefined && undefined.__rest) || function (s, e) {
     return t;
 };
 
+
 const getShop = () => {
     let store = window.__mmStore;
     if (!Object(lodash["k" /* isUndefined */])(window.Shopify)) {
@@ -853,6 +854,7 @@ const isCouponApplied = (cart, coupon) => {
         isApplied: false,
     };
 };
+const isCartPage = () => window.location.pathname === apis["a" /* CART_ROOT */];
 
 // CONCATENATED MODULE: ./src/features/v2widgets/constants.ts
 var SideCartStatus;
@@ -870,6 +872,7 @@ const HIDE_CART_ZINDEX = "-2147483647";
 const HIDE_CART_BG = "transparent";
 const SHOW_CART_ZINDEX = "2147483647";
 const SHOW_CART_BG = "rgba(0,0,0,.7)";
+const OPEN_CART_PARAM = "open-cart-drawer";
 
 // CONCATENATED MODULE: ./src/features/v2widgets/sidecart/Launcher.ts
 
@@ -1296,7 +1299,10 @@ class SideCart_SideCart {
         return iframe;
     }
     load() {
-        if (!this.isFrameAdded()) {
+        if (isCartPage()) {
+            window.location.href = `/?action=open-cart-drawer`;
+        }
+        else if (!this.isFrameAdded()) {
             const { iframe } = this;
             document.body.appendChild(iframe);
             this.setStatus(SideCartStatus.ADDED);
@@ -1433,7 +1439,7 @@ class SideCart_SideCart {
     fetchCart() {
         return __awaiter(this, void 0, void 0, function* () {
             const fetch = Object(Interceptor["c" /* getInterceptDisabledFetch */])();
-            const response = yield fetch(apis["c" /* ajaxCartAPIs */].fetch, {
+            const response = yield fetch(apis["d" /* ajaxCartAPIs */].fetch, {
                 method: "GET",
             });
             return response.json();
@@ -1484,7 +1490,7 @@ class SideCart_SideCart {
     }
     onCartFetchIntercepted(payload) {
         const { method, path, response } = payload;
-        if (method === "GET" && path === apis["c" /* ajaxCartAPIs */].fetch && response) {
+        if (method === "GET" && path === apis["d" /* ajaxCartAPIs */].fetch && response) {
             Object(utils_console["b" /* debugLog */])("Cart fetch detected");
             this.updateCartItemCount(response);
         }
@@ -1527,22 +1533,22 @@ class SideCart_SideCart {
         Object(utils_console["b" /* debugLog */])("Setting up interception");
         Interceptor["b" /* default */].listen(Interceptor["a" /* Event */].RESPONSE, {
             method: "GET",
-            path: apis["c" /* ajaxCartAPIs */].fetch,
+            path: apis["d" /* ajaxCartAPIs */].fetch,
         }, this.cartFetchHandler.bind(this));
         Interceptor["b" /* default */].listen(Interceptor["a" /* Event */].RESPONSE, {
-            path: [apis["c" /* ajaxCartAPIs */].add, apis["d" /* themeCartAPIs */].add],
+            path: [apis["d" /* ajaxCartAPIs */].add, apis["e" /* themeCartAPIs */].add],
             method: "POST",
         }, this.itemAddHandler.bind(this));
         Interceptor["b" /* default */].listen(Interceptor["a" /* Event */].RESPONSE, {
-            path: [apis["c" /* ajaxCartAPIs */].update, apis["d" /* themeCartAPIs */].update],
+            path: [apis["d" /* ajaxCartAPIs */].update, apis["e" /* themeCartAPIs */].update],
             method: "POST",
         }, this.cartUpdateHandler.bind(this));
         Interceptor["b" /* default */].listen(Interceptor["a" /* Event */].RESPONSE, {
-            path: [apis["c" /* ajaxCartAPIs */].change, apis["d" /* themeCartAPIs */].change],
+            path: [apis["d" /* ajaxCartAPIs */].change, apis["e" /* themeCartAPIs */].change],
             method: "POST",
         }, this.cartChangeHandler.bind(this));
         Interceptor["b" /* default */].listen(Interceptor["a" /* Event */].RESPONSE, {
-            path: [apis["c" /* ajaxCartAPIs */].clear],
+            path: [apis["d" /* ajaxCartAPIs */].clear],
             method: "POST",
         }, this.cartClearHandler.bind(this));
     }
@@ -1554,7 +1560,7 @@ class SideCart_SideCart {
             let action;
             let changed = false;
             const callUpdateAPI = (updateAction, body) => __awaiter(this, void 0, void 0, function* () {
-                const updatedCart = (yield fetch(apis["c" /* ajaxCartAPIs */].update, {
+                const updatedCart = (yield fetch(apis["d" /* ajaxCartAPIs */].update, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -1572,7 +1578,7 @@ class SideCart_SideCart {
                 });
             }
             if (add.length > 0) {
-                yield fetch(apis["c" /* ajaxCartAPIs */].add, {
+                yield fetch(apis["d" /* ajaxCartAPIs */].add, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -1593,7 +1599,7 @@ class SideCart_SideCart {
                 });
             }
             if (Object(lodash["j" /* isString */])(discountCode)) {
-                yield fetch(`${apis["c" /* ajaxCartAPIs */].applyDiscountPrefix}${Object(lodash["l" /* isValidString */])(discountCode) ? discountCode : apis["b" /* INVALID_DISCOUNT_CODE */]}`, {
+                yield fetch(`${apis["d" /* ajaxCartAPIs */].applyDiscountPrefix}${Object(lodash["l" /* isValidString */])(discountCode) ? discountCode : apis["c" /* INVALID_DISCOUNT_CODE */]}`, {
                     method: "GET",
                 });
                 finalCart = yield this.fetchCart();
@@ -1609,7 +1615,7 @@ class SideCart_SideCart {
             if (Object(lodash["i" /* isPlainObject */])(itemProperties)) {
                 const updatePromises = Object.keys(itemProperties).map((lineKey) => {
                     const properties = itemProperties[lineKey];
-                    return fetch(apis["c" /* ajaxCartAPIs */].change, {
+                    return fetch(apis["d" /* ajaxCartAPIs */].change, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
@@ -1659,6 +1665,7 @@ class SideCart_SideCart {
             }));
             channel.bind(dist["ChannelMethod"].CHECKOUT, (_t, payload) => __awaiter(this, void 0, void 0, function* () {
                 Object(checkout["a" /* processCheckout */])(payload);
+                this.closeCart();
             }));
             channel.bind(dist["ChannelMethod"].GET_QUERY, () => {
                 Object(utils_console["b" /* debugLog */])("GET_QUERY received");
@@ -1703,6 +1710,7 @@ var sidecart_awaiter = (undefined && undefined.__awaiter) || function (thisArg, 
 
 
 
+
 (() => sidecart_awaiter(void 0, void 0, void 0, function* () {
     try {
         CFEvent["a" /* CFEvent */].init();
@@ -1711,6 +1719,11 @@ var sidecart_awaiter = (undefined && undefined.__awaiter) || function (thisArg, 
         Object(listeners["a" /* setupCartOpenListeners */])(() => {
             sideCart.openCart(dist["CartEventAction"].OPEN_CART);
         });
+        const urlParams = new URLSearchParams(window.location.search);
+        const actionParam = urlParams.get("action");
+        if (actionParam === OPEN_CART_PARAM) {
+            sideCart.openCart(dist["CartEventAction"].OPEN_CART);
+        }
     }
     catch (ex) {
         console.error(ex);
