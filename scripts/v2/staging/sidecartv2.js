@@ -1272,6 +1272,7 @@ class SideCart_SideCart {
         if (frame) {
             frame.style.zIndex = HIDE_CART_ZINDEX;
             frame.style.backgroundColor = HIDE_CART_BG;
+            frame.style.opacity = "0";
         }
     }
     showFrame(overrideFrame) {
@@ -1279,6 +1280,7 @@ class SideCart_SideCart {
         if (frame) {
             frame.style.zIndex = SHOW_CART_ZINDEX;
             frame.style.backgroundColor = SHOW_CART_BG;
+            frame.style.opacity = "1";
         }
     }
     setupFrame() {
